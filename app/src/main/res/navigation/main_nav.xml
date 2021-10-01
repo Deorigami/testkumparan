@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/listPostsFragment">
+
+    <fragment
+        android:id="@+id/listPostsFragment"
+        android:name="com.sst.testkumparan.persentation.fragments.ListPostsFragment"
+        android:label="fragment_list_posts"
+        tools:layout="@layout/fragment_list_posts" >
+        <action
+            android:id="@+id/action_listPostsFragment_to_postDetailFragment"
+            app:destination="@id/postDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postDetailFragment"
+        android:name="com.sst.testkumparan.persentation.fragments.PostDetailFragment"
+        android:label="fragment_post_detail"
+        tools:layout="@layout/fragment_post_detail" >
+        <argument
+            android:name="post"
+            app:argType="com.sst.testkumparan.domain.models.Post" />
+        <action
+            android:id="@+id/action_postDetailFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.sst.testkumparan.persentation.fragments.UserDetailFragment"
+        android:label="fragment_user_detail"
+        tools:layout="@layout/fragment_user_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>
