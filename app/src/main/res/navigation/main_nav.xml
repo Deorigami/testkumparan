@@ -31,8 +31,17 @@
         android:name="com.sst.testkumparan.persentation.fragments.UserDetailFragment"
         android:label="fragment_user_detail"
         tools:layout="@layout/fragment_user_detail" >
+        <action
+            android:id="@+id/action_userDetailFragment_to_photoDetailFragment"
+            app:destination="@id/photoDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoDetailFragment"
+        android:name="com.sst.testkumparan.persentation.fragments.PhotoDetailFragment"
+        android:label="fragment_photo_detail"
+        tools:layout="@layout/fragment_photo_detail" >
         <argument
-            android:name="id"
-            app:argType="integer" />
+            android:name="photo"
+            app:argType="com.sst.testkumparan.domain.models.Photo" />
     </fragment>
 </navigation>

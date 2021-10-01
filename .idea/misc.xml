@@ -10,10 +10,19 @@
         <entry key="..\:/Angga/Compose/testkumparan2/app/src/main/res/layout/fragment_user_detail.xml" value="0.3359375" />
         <entry key="..\:/Angga/Compose/testkumparan2/app/src/main/res/layout/item_comment.xml" value="0.3359375" />
         <entry key="..\:/Angga/Compose/testkumparan2/app/src/main/res/layout/item_post.xml" value="0.3359375" />
+        <entry key="..\:/Users/angga/StudioProjects/testkumparan/app/src/main/res/drawable/bg_bottom_gradient.xml" value="0.3671875" />
+        <entry key="..\:/Users/angga/StudioProjects/testkumparan/app/src/main/res/drawable/bottom_line_comment.xml" value="0.3671875" />
+        <entry key="..\:/Users/angga/StudioProjects/testkumparan/app/src/main/res/drawable/ic_arrows.xml" value="0.3671875" />
+        <entry key="..\:/Users/angga/StudioProjects/testkumparan/app/src/main/res/drawable/progress_animation.xml" value="0.3671875" />
+        <entry key="..\:/Users/angga/StudioProjects/testkumparan/app/src/main/res/layout/fragment_photo_detail.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/angga/StudioProjects/testkumparan/app/src/main/res/layout/fragment_user_detail.xml" value="0.297554347826087" />
+        <entry key="..\:/Users/angga/StudioProjects/testkumparan/app/src/main/res/layout/item_album.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/angga/StudioProjects/testkumparan/app/src/main/res/layout/item_comment.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/angga/StudioProjects/testkumparan/app/src/main/res/layout/item_photo.xml" value="0.19479166666666667" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.SavedStateHandle
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
@@ -18,11 +19,13 @@ import com.sst.testkumparan.domain.models.Comment
 import com.sst.testkumparan.domain.models.Post
 import com.sst.testkumparan.persentation.adapters.CommentsAdapter
 import com.sst.testkumparan.persentation.adapters.ListPostAdapter
+import com.sst.testkumparan.persentation.viewmodels.UserViewModel
 
 class PostDetailFragment : Fragment() {
 
     lateinit var binding : FragmentPostDetailBinding
     private val args : PostDetailFragmentArgs by navArgs()
+    private val userVM : UserViewModel by activityViewModels()
 
     lateinit var inclBody : TextView
     lateinit var inclCompany : TextView
@@ -70,7 +73,8 @@ class PostDetailFragment : Fragment() {
             text = post.user?.username
             setOnClickListener {
                 post.user?.let {
-                    findNavController().navigate(PostDetailFragmentDirections.actionPostDetailFragmentToUserDetailFragment(it.id))
+                    userVM.getUser(it.id)
+                    findNavController().navigate(PostDetailFragmentDirections.actionPostDetailFragmentToUserDetailFragment())
                 }
             }
         }

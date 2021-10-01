@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         app:flexDirection="column"
         app:layout_flexBasisPercent="55%"
-        android:background="@drawable/bottom_line"
+        android:background="@drawable/bottom_line_post"
         android:paddingBottom="10dp"
         >
         <TextView
