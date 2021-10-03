@@ -41,6 +41,11 @@ class UserDetailFragment : Fragment() {
         albumAdapter = AlbumAdapter(listAlbum)
 
         userVM.userState.observe(viewLifecycleOwner,{
+
+            if (it.isLoading) {
+
+            }
+
             binding.userName.text = it.users?.username
             binding.userEmail.text = it.users?.email
             binding.userAddress.text = it.users?.address

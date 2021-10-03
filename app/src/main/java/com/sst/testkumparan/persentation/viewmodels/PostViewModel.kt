@@ -21,7 +21,7 @@ class PostViewModel @Inject constructor(
         getPosts()
     }
 
-    private fun getPosts(){
+    fun getPosts(){
         getPostsUseCase().onEach { result ->
             when(result){
                 is Resource.Success -> {
