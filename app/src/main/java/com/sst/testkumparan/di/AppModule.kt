@@ -26,12 +26,6 @@ object AppModule {
         .writeTimeout(1, TimeUnit.MINUTES)
         .build()
 
-
-
-
-
-
-
     @Singleton
     @Provides
     fun provideRetrofit (okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()

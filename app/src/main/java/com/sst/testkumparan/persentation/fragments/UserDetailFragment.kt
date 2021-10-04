@@ -31,7 +31,7 @@ class UserDetailFragment : Fragment() {
     lateinit var listAlbum : MutableList<Album>
 
     private val userVM : UserViewModel by activityViewModels()
-
+    private val args : UserDetailFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,10 +42,8 @@ class UserDetailFragment : Fragment() {
 
         userVM.userState.observe(viewLifecycleOwner,{
 
-            if (it.isLoading) {
-
-            }
-
+            binding.container.isRefreshing = it.isLoading
+            binding.imBadRequest.visibility = if (it.error != "") View.VISIBLE else View.GONE
             binding.userName.text = it.users?.username
             binding.userEmail.text = it.users?.email
             binding.userAddress.text = it.users?.address
@@ -58,7 +56,7 @@ class UserDetailFragment : Fragment() {
 
 
         })
-
+        binding.container.setOnRefreshListener { userVM.getUser(args.id) }
         initAlbumRV()
         return binding.root
     }

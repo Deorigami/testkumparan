@@ -74,7 +74,7 @@ class PostDetailFragment : Fragment() {
             setOnClickListener {
                 post.user?.let {
                     userVM.getUser(it.id)
-                    findNavController().navigate(PostDetailFragmentDirections.actionPostDetailFragmentToUserDetailFragment())
+                    findNavController().navigate(PostDetailFragmentDirections.actionPostDetailFragmentToUserDetailFragment(it.id))
                 }
             }
         }

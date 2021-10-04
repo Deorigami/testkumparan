@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_userDetailFragment_to_photoDetailFragment"
             app:destination="@id/photoDetailFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/photoDetailFragment"

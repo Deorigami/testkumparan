@@ -1,42 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:flexDirection="column"
-    tools:context=".persentation.fragments.UserDetailFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/user_name"
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        <com.google.android.flexbox.FlexboxLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:flexDirection="column"
+            tools:context=".persentation.fragments.UserDetailFragment">
 
-    <TextView
-        android:id="@+id/user_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment" />
+            <!-- TODO: Update blank fragment layout -->
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_blank_fragment" />
 
-    <TextView
-        android:id="@+id/user_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment" />
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_blank_fragment" />
 
-    <TextView
-        android:id="@+id/user_company"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment" />
+            <TextView
+                android:id="@+id/user_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_blank_fragment" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/album_rv"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_flexGrow="1"
-        />
+            <TextView
+                android:id="@+id/user_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_blank_fragment" />
 
-</com.google.android.flexbox.FlexboxLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/album_rv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_flexGrow="1"
+                />
+
+        </com.google.android.flexbox.FlexboxLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_im_bad_request"
+            android:id="@+id/im_bad_request"
+            />
+    </FrameLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
